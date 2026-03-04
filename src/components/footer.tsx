@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin, Mail } from "lucide-react"
+import { Github, Twitter, Linkedin, Mail, Phone } from "lucide-react"
 
 export function Footer() {
   return (
@@ -8,61 +8,58 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <h2 className="font-orbitron text-2xl font-bold text-white mb-4">
-              Synapse<span className="text-red-500">AI</span>
+              PROMO<span className="text-red-500">DRIVE</span>
             </h2>
-            <p className="font-space-mono text-gray-300 mb-6 max-w-md">
-              Продвигаем будущее нейросвязи с передовыми технологиями интерфейса мозг-компьютер.
+            <p className="font-space-mono text-gray-300 mb-4 max-w-md leading-relaxed">
+              Рекламное агентство полного цикла для среднего и крупного бизнеса. SEO, контекст, разработка сайтов
+              и приложений, техническая поддержка.
+            </p>
+            <p className="font-space-mono text-gray-400 text-sm mb-6">
+              Работаем по всей России и СНГ
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-red-500 transition-colors duration-200">
+              <a href="#" className="text-gray-400 hover:text-red-500 transition-colors duration-200" aria-label="VK">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-red-500 transition-colors duration-200">
+              <a href="#" className="text-gray-400 hover:text-red-500 transition-colors duration-200" aria-label="Telegram">
                 <Github size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-red-500 transition-colors duration-200">
+              <a href="#" className="text-gray-400 hover:text-red-500 transition-colors duration-200" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-red-500 transition-colors duration-200">
+              <a href="mailto:info@promodrive.ru" className="text-gray-400 hover:text-red-500 transition-colors duration-200" aria-label="Email">
                 <Mail size={20} />
               </a>
             </div>
           </div>
 
-          {/* Product */}
+          {/* Services */}
           <div>
-            <h3 className="font-orbitron text-white font-semibold mb-4">Продукт</h3>
+            <h3 className="font-orbitron text-white font-semibold mb-4">Услуги</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#technology"
-                  className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200"
-                >
-                  Технологии
+                <a href="#services" className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200">
+                  SEO-продвижение
                 </a>
               </li>
               <li>
-                <a
-                  href="#applications"
-                  className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200"
-                >
-                  Применения
+                <a href="#services" className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200">
+                  Контекстная реклама
                 </a>
               </li>
               <li>
-                <a
-                  href="#safety"
-                  className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200"
-                >
-                  Безопасность
+                <a href="#services" className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200">
+                  Разработка сайтов
                 </a>
               </li>
               <li>
-                <a
-                  href="#faq"
-                  className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200"
-                >
-                  Вопросы
+                <a href="#services" className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200">
+                  Разработка приложений
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200">
+                  Техподдержка
                 </a>
               </li>
             </ul>
@@ -73,23 +70,24 @@ export function Footer() {
             <h3 className="font-orbitron text-white font-semibold mb-4">Компания</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200">
-                  О нас
+                <a href="#cases" className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200">
+                  Кейсы
+                </a>
+              </li>
+              <li>
+                <a href="#faq" className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200">
+                  Частые вопросы
                 </a>
               </li>
               <li>
                 <a href="#" className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200">
-                  Карьера
+                  О компании
                 </a>
               </li>
               <li>
-                <a href="#" className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200">
-                  Пресса
-                </a>
-              </li>
-              <li>
-                <a href="#" className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200">
-                  Контакты
+                <a href="#" className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200 flex items-center gap-2">
+                  <Phone size={14} />
+                  +7 (800) 000-00-00
                 </a>
               </li>
             </ul>
@@ -99,24 +97,15 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-8 pt-8 border-t border-red-500/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="font-space-mono text-gray-400 text-sm">2025 SynapseAI. Все права защищены.</p>
+            <p className="font-space-mono text-gray-400 text-sm">© 2025 PromoDrive. Все права защищены.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a
-                href="#"
-                className="font-space-mono text-gray-400 hover:text-red-500 text-sm transition-colors duration-200"
-              >
+              <a href="#" className="font-space-mono text-gray-400 hover:text-red-500 text-sm transition-colors duration-200">
                 Конфиденциальность
               </a>
-              <a
-                href="#"
-                className="font-space-mono text-gray-400 hover:text-red-500 text-sm transition-colors duration-200"
-              >
+              <a href="#" className="font-space-mono text-gray-400 hover:text-red-500 text-sm transition-colors duration-200">
                 Условия использования
               </a>
-              <a
-                href="#"
-                className="font-space-mono text-gray-400 hover:text-red-500 text-sm transition-colors duration-200"
-              >
+              <a href="#" className="font-space-mono text-gray-400 hover:text-red-500 text-sm transition-colors duration-200">
                 Cookie-политика
               </a>
             </div>

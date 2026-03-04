@@ -1,53 +1,54 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import Icon from "@/components/ui/icon"
 
 const features = [
   {
-    title: "Адаптивная нейрообработка",
-    description: "Самооптимизирующиеся алгоритмы, которые обучаются на нейронных паттернах и улучшают интерпретацию сигналов.",
-    icon: "brain",
-    badge: "ИИ",
+    title: "SEO-продвижение",
+    description: "Выводим сайты в топ поисковых систем. Комплексная работа с семантикой, контентом и технической оптимизацией для стабильного органического трафика.",
+    icon: "TrendingUp",
+    badge: "Органика",
   },
   {
-    title: "Медицинская защита",
-    description: "Шифрование по стандартам FDA со сквозной защитой конфиденциальных нейронных данных.",
-    icon: "lock",
-    badge: "Сертификат",
+    title: "Контекстная реклама",
+    description: "Настройка и ведение рекламных кампаний в Яндекс.Директ и Google Ads. Максимальный ROI при минимальном бюджете — платите только за результат.",
+    icon: "Target",
+    badge: "PPC",
   },
   {
-    title: "Интуитивное управление",
-    description: "Естественная трансляция мыслей в действия с откликом менее миллисекунды и точностью 99,7%.",
-    icon: "globe",
-    badge: "Точность",
+    title: "Разработка сайтов",
+    description: "Создаём продающие сайты и корпоративные порталы под ключ. Современный дизайн, высокая скорость загрузки и конверсионные страницы.",
+    icon: "Globe",
+    badge: "Web",
   },
   {
-    title: "Предиктивная калибровка",
-    description: "ML-модели, которые предугадывают намерения пользователя и оптимизируют нейронные пути.",
-    icon: "zap",
-    badge: "Умный",
+    title: "Разработка приложений",
+    description: "Мобильные и веб-приложения для автоматизации бизнеса. iOS, Android и кроссплатформенные решения с интеграцией в ваши бизнес-процессы.",
+    icon: "Smartphone",
+    badge: "App",
   },
   {
-    title: "Биометрическая интеграция",
-    description: "Бесшовная синхронизация с мониторингом жизненных показателей для контроля здоровья.",
-    icon: "link",
-    badge: "Связь",
+    title: "Техническая поддержка",
+    description: "Ежемесячное сопровождение вашего цифрового присутствия: обновления, мониторинг, безопасность и оперативное решение любых задач.",
+    icon: "Shield",
+    badge: "24/7",
   },
   {
-    title: "Поддержка XR",
-    description: "Нативная совместимость с AR/VR-средами для терапевтических и рабочих приложений.",
-    icon: "target",
-    badge: "XR Ready",
+    title: "Аналитика и отчётность",
+    description: "Прозрачные отчёты по всем каналам: трафик, лиды, продажи. Принимайте решения на основе реальных данных, а не ощущений.",
+    icon: "BarChart3",
+    badge: "Data",
   },
 ]
 
 export function FeaturesSection() {
   return (
-    <section className="py-24 px-6 bg-background">
+    <section id="services" className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4 font-sans">Возможности нового поколения</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4 font-sans">Комплексный digital-маркетинг</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Почувствуйте будущее с технологиями, которые переопределяют возможное
+            Полный цикл продвижения бизнеса в интернете — от разработки до стабильного потока клиентов
           </p>
         </div>
 
@@ -60,14 +61,9 @@ export function FeaturesSection() {
             >
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-3xl">
-                    {feature.icon === "brain" && "&#129504;"}
-                    {feature.icon === "lock" && "&#128274;"}
-                    {feature.icon === "globe" && "&#127760;"}
-                    {feature.icon === "zap" && "&#9889;"}
-                    {feature.icon === "link" && "&#128279;"}
-                    {feature.icon === "target" && "&#127919;"}
-                  </span>
+                  <div className="text-red-500">
+                    <Icon name={feature.icon} size={32} fallback="Star" />
+                  </div>
                   <Badge variant="secondary" className="bg-accent text-accent-foreground">
                     {feature.badge}
                   </Badge>
